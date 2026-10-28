@@ -2,7 +2,7 @@
 
 Dashboard em Python (Streamlit + pandas) que transforma o registro diário de hábitos em indicadores e gráficos: taxa de conclusão, sequências de dias, evolução com média móvel e melhores dias da semana.
 
-**Demo:** _cole aqui o link do Streamlit Cloud_
+**Demo:** https://habitos-diarios-python-hcscc84edqtme626etl9ew.streamlit.app/
 
 ![Dashboard](docs/dashboard.png)
 
