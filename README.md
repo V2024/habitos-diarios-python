@@ -1,64 +1,53 @@
-# Hábitos Diários
+# ✅ Hábitos Diários — Dashboard
 
-Aplicativo de linha de comando em Python para registrar hábitos diários — sono, estudo e exercício — comparar com metas pessoais e sugerir um cronograma para o dia seguinte.
+Dashboard em Python (Streamlit + pandas) que transforma o registro diário de hábitos em indicadores e gráficos: taxa de conclusão, sequências de dias, evolução com média móvel e melhores dias da semana.
 
-## O que o projeto faz
+**Demo:** _cole aqui o link do Streamlit Cloud_
 
-- Pergunta, no terminal, quantas horas você dormiu e quantos minutos você estudou e se exercitou no dia
-- Mostra um resumo do dia, indicando se as metas de sono, estudo e exercício foram batidas
-- Gera automaticamente uma sugestão de cronograma para o dia seguinte, com base no seu ritmo atual
-- Salva o registro do dia em um arquivo `habitos.csv`, criando um histórico ao longo do tempo
+![Dashboard](docs/dashboard.png)
 
-## Exemplo de uso
+## O que ele mostra
 
-```
-Ola, Viviane!
-=== Habitos diarios ===
-quantas horas voce dorme? 8
-quantos minutos voce estudou? 60
-quantos minutos voce se exercitou hoje? 30
+- Taxa de conclusão, dias registrados, sequência atual e melhor sequência
+- Evolução diária com média móvel de 7 dias
+- Conclusão por hábito
+- Desempenho por dia da semana
+- Filtros de período e de hábitos, e meta diária ajustável
 
-Sono : 8 horas
-Estudo : 60 minutos
-Exercicio : 30 minutos
+## Como rodar
 
-Voce bateu a meta de sono!
-Parabens, atingiu a meta diaria de estudos!
-Parabens, continue no foco!
-
-=== Resumo do dia ===
-Sono : 8
-Estudo : 60
-Exercicio : 30
-
-=== Cronograma sugerido para amanha ===
-07:30 - Acordar (mantenha o horario de sono que ja esta funcionando)
-08:00 - Cafe da manha
-09:00 - Estudo (bloco de 45min, seu ritmo esta bom)
-13:00 - Almoco
-19:00 - Exercicio (20 a 30min, continue no ritmo atual)
-22:30 - Momento de desconexao (sem telas) antes de dormir
-
-Registro de 2026-08-03 salvo em 'habitos.csv'.
+```bash
+git clone https://github.com/V2024/habitos-diarios.git
+cd habitos-diarios
+python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+streamlit run app.py
 ```
 
-## Como executar
+Sem dados reais, o app abre com `dados/habitos_exemplo.csv`.
 
-1. Tenha o [Python](https://www.python.org/downloads/) instalado (versão 3.10 ou superior)
-2. Clone este repositório ou baixe o arquivo `habitos-diario.py`
-3. No terminal, dentro da pasta do projeto, rode:
+## Formato do CSV
 
-```
-python habitos-diario.py
-```
+Coloque seu arquivo em `dados/habitos.csv`:
 
-4. Responda às perguntas sobre o seu dia — o registro é salvo automaticamente em `habitos.csv`
+| coluna | exemplo | observação |
+|--------|---------|------------|
+| data   | 2026-10-27 ou 27/10/2026 | uma linha por hábito por dia |
+| habito | Estudar Python | nome do hábito |
+| feito  | 1 / 0, sim / não | concluído ou não |
+
+Se os nomes das colunas forem outros, ajuste as constantes `COL_DATA`, `COL_HABITO` e `COL_FEITO` no topo do `app.py`.
 
 ## Tecnologias
 
-- Python (biblioteca padrão, sem dependências externas)
-- Manipulação de arquivos CSV para histórico de dados
+Python · pandas · Streamlit
 
-## Sobre
+## Deploy
 
-Projeto pessoal desenvolvido por [Viviane Miranda](https://github.com/V2024) como parte da transição de carreira de Análise de Dados/BI para Desenvolvimento Python.
+Publicado no Streamlit Community Cloud apontando para `app.py`.
+
+## Próximos passos
+
+- Integrar com IA para gerar um resumo semanal dos hábitos
+- Salvar os registros em SQLite
