@@ -17,8 +17,8 @@ Dashboard em Python (Streamlit + pandas) que transforma o registro di√°rio de h√
 ## Como rodar
 
 ```bash
-git clone https://github.com/V2024/habitos-diarios.git
-cd habitos-diarios
+git clone https://github.com/V2024/habitos-diarios-python.git
+cd habitos-diarios-python
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
