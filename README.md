@@ -57,7 +57,7 @@ Se os nomes das colunas forem outros, ajuste as constantes `COL_DATA`, `COL_HABI
 ├── app.py                  # dashboard (Streamlit)
 ├── habitos-diarios.py      # script que registra os hábitos em CSV
 ├── dados/                  # CSV de exemplo
-├── docs/                   # print do dashboard
+├── dashboard.jpg                  # print do dashboard
 ├── .streamlit/config.toml  # tema visual
 └── requirements.txt
 ```
