@@ -4,7 +4,7 @@ Meu primeiro app em Python: um dashboard que transforma o registro diário de h�
 
 **🔗 Demo:** https://habitos-diarios-python-hcscc84edqtme626etl9ew.streamlit.app/
 
-![Dashboard](docs/dashboard.jpg)
+![Dashboard](dashboard.jpg)
 
 ## Como surgiu
 
